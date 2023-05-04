@@ -27,3 +27,4 @@ services:
     container_name: 'ferretdb'
     restart: 'on-failure'
     ports:
+      - 27017:27017
