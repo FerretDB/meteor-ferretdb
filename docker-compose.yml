@@ -23,7 +23,7 @@ services:
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf
   ferretdb:
-    image: ghcr.io/ferretdb/all-in-one
+    image: ghcr.io/ferretdb/all-in-one:latest
     hostname: 'ferretdb'
     container_name: 'ferretdb'
     restart: 'on-failure'
