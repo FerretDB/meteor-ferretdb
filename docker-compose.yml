@@ -32,5 +32,5 @@ services:
     healthcheck:
       test: ["CMD-SHELL", "pg_isready"]
       interval: 10s
-      timeout: 5s
+      timeout: 10s
       retries: 5
