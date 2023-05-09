@@ -15,9 +15,6 @@ services:
     image: nginx
     hostname: 'nginx'
     container_name: 'nginx'
-    depends_on:
-      ferretdb:
-        condition: service_healthy
     ports:
       - 8888:8888
     volumes:
@@ -29,8 +26,3 @@ services:
     restart: 'on-failure'
     ports:
       - 27017:27017
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
